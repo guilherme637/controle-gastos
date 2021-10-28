@@ -56,7 +56,7 @@
         ],
         "build-db": {
             "remove:migrations": "sudo rm migrations/*.php",
-            "remove:db": "sudo rm var/db.*",
+            "remove:db": "sudo rm var/data.db",
             "create:db": "php bin/console doctrine:database:create",
             "create:migrations": "php bin/console doctrine:migrations:diff",
             "load:migrate": "php bin/console doctrine:migrations:migrate"
