@@ -1,6 +1,7 @@
 doctrine:
     dbal:
-        url: '%env(resolve:DATABASE_URL)%'
+        dbdrive: '%env(resolve:DATABASE_DRIVE)%'
+        dbpath: '%env(resolve:DATABASE_NOME)%'
 
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
@@ -12,7 +13,7 @@ doctrine:
         mappings:
             App:
                 is_bundle: false
-                type: annotation
+                type: xml
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
                 alias: App
